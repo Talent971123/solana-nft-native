@@ -1,0 +1,20 @@
+[package]
+name = "solana-nft-native"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+borsh = "0.9.3"
+borsh-derive = "0.9.3"
+mpl-token-metadata = { version = "1.2.5", features = ["no-entrypoint"] }
+solana-program = "=1.14.20"
+spl-associated-token-account = { version = "1.0.3", features = [
+    "no-entrypoint",
+] }
+spl-token = { version = "3.3.0", features = ["no-entrypoint"] }
+
+
+[lib]
+crate-type = ["cdylib", "lib"]
